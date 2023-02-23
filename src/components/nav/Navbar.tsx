@@ -5,6 +5,7 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 import { NavOptions } from "../../shared/types";
 
 type Props = {
+  isTopOfPage: boolean;
   selectedPage: NavOptions;
   setSelectedPage: (value: NavOptions) => void;
 };
@@ -14,21 +15,30 @@ const style = {
   hoverBlue: `transition duration-100 ease-in-out hover:bg-gradient-to-r hover:from-[#1C1F1B] hover:to-[#2877b5]  cursor-pointer  hover:text-[#c9c0a5] active:scale-110`,
 };
 
-const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
+const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
   const isAboveMediumScreen = useMediaQuery("(min-width:1060px)");
+  const NavbarBG = `${isTopOfPage ? "" : "bg-[#C9C0A5]"}`;
 
   return (
     <div
-      className={` ${style.flexBetween}  fixed top-0 z-30  h-[80px] w-full bg-[#C9C0A5] px-10 font-mont`}
+      className={` ${style.flexBetween} ${NavbarBG} drop-shadow-md fixed top-0 z-30  h-[80px] w-full px-10 font-mont`}
     >
       <div className={`${style.flexBetween} mx-auto w-5/6`}>
         <div>
-          <img
-            src=".\src\assets\mac-agr-icon.png"
-            className="h-[100px] cursor-pointer duration-300 ease-in-out active:scale-110"
-            alt="logo"
-          ></img>
+          {isTopOfPage ? (
+            <img
+              src=".\src\assets\mac-agr-icon-slate.png"
+              className="h-[100px] cursor-pointer duration-300 ease-in-out active:scale-110"
+              alt="logo"
+            ></img>
+          ) : (
+            <img
+              src=".\src\assets\mac-agr-icon.png"
+              className="h-[100px] cursor-pointer duration-300 ease-in-out active:scale-110"
+              alt="logo"
+            ></img>
+          )}
         </div>
 
         {isAboveMediumScreen ? (
@@ -68,14 +78,17 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
         ) : (
           <div
             onClick={() => setShowSidebar(!showSidebar)}
-            className="flex h-[40px] cursor-pointer rounded-full bg-[#416A59]  p-2 text-[#C9C0A5]"
+            className={`flex h-[40px] cursor-pointer  rounded-full p-2 ${
+              isTopOfPage
+                ? "bg-[#C9C0A5] text-[#416A59]"
+                : "bg-[#416A59] text-[#C9C0A5]"
+            }`}
           >
             <Bars3Icon />
           </div>
         )}
 
-
-          {/* backdrop */}
+        {/* backdrop */}
         {showSidebar && (
           <div className="fixed top-0 left-0 h-screen w-full bg-black/80"></div>
         )}
