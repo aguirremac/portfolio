@@ -3,6 +3,7 @@ import { ArrowDownTrayIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/sol
 import Link from "./Link";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { NavOptions } from "../../shared/types";
+import {RxHamburgerMenu} from 'react-icons/rx';
 
 type Props = {
   isTopOfPage: boolean;
@@ -92,7 +93,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                 : "bg-[#416A59] text-[#C9C0A5]"
             }`}
           >
-            <Bars3Icon />
+            <RxHamburgerMenu />
           </div>
         )}
 
