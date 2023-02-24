@@ -18,7 +18,7 @@ const style = {
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
   const isAboveMediumScreen = useMediaQuery("(min-width:1060px)");
-  const NavbarBG = `${isTopOfPage ? "" : "bg-[#C9C0A5]/90 duration-1000  "}`;
+  const NavbarBG = `${isTopOfPage ? "" : "bg-[#C9C0A5]/90 duration-500  "}`;
 
   return (
     <div
