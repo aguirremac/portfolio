@@ -29,7 +29,7 @@ const About = ({ setSelectedPage }: Props) => {
        visible: {opacity: 1, x: 0}
      }}
       >
-          <h1 className="text-3xl lg:text-5xl xl:text-7xl font-bold text-[#C9C0A5] ">
+          <h1 className="text-3xl md:text-5xl xl:text-7xl font-bold text-[#C9C0A5] ">
             <span className="inline-block hover:text-[#39709B] text-jelly">{"{"}</span>
             <span className="inline-block hover:text-[#39709B] text-jelly">.</span>
             <span className="inline-block hover:text-[#39709B] text-jelly">.</span>
