@@ -127,7 +127,7 @@ const Home = ({ setSelectedPage }: Props) => {
         </motion.div>
       </div>
       </div>
-      <hr className="w-5/6 mx-auto text-[#C9C0A5] opacity-20" />
+      <hr className="w-9/12 mx-auto text-[#C9C0A5] opacity-20" />
     </section>
     
   );
