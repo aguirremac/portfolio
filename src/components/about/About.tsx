@@ -1,6 +1,7 @@
 import {useState} from "react";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { NavOptions } from "../../shared/types";
+import { motion } from "framer-motion";
 
 
 type Props = {
@@ -15,7 +16,16 @@ function About({ setSelectedPage }: Props) {
 
   return (
     <section className="mx-auto flex flex-col justify-center items-center h-screen w-9/12  font-mont text-[#C9C0A5]">
-      <div className="flex justify-center w-full xl:mb-14">
+      <motion.div className="flex justify-center w-full xl:mb-14"
+      initial = 'hidden'
+      whileInView='visible'
+      viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
+      transition={{delay:0.2, duration: 1}}
+      variants={{
+       hidden: {opacity: 0, x: 0},
+       visible: {opacity: 1, x: 0}
+     }}
+      >
           <h1 className="text-3xl lg:text-5xl xl:text-7xl font-bold text-[#C9C0A5] ">
             <span className="inline-block hover:text-[#39709B] text-jelly">{"{"}</span>
             <span className="inline-block hover:text-[#39709B] text-jelly">.</span>
@@ -31,13 +41,22 @@ function About({ setSelectedPage }: Props) {
             <span className="inline-block hover:text-[#39709B] text-jelly">e</span>
             <span className="inline-block hover:text-[#39709B] text-jelly">{"}"}</span>
           </h1>
-</div>
+</motion.div>
 
       
       <div className={`flex ${isAboveMediumScreen ? '' : 'flex-col'} justify-center items-center gap-5 mt-12`}>
 
         {/* LEFT SECTION */}
-        <div   className="basis-1/2 flex justify-center cursor-pointer">
+        <motion.div   className="basis-1/2 flex justify-center cursor-pointer"
+          initial = 'hidden'
+          whileInView='visible'
+          viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
+          transition={{ duration: 1}}
+          variants={{
+           hidden: {opacity: 0, x: -200},
+           visible: {opacity: 1, x: 0}
+         }}
+        >
         {hovered ? <img onMouseEnter={()=>setHovered(true)} onMouseLeave={()=>setHovered(false)}
           className={`h-[170px] md:h-[400px] hover:scale-105 duration-300`}
           src="\assets\prof2-v2.png"
@@ -47,24 +66,42 @@ function About({ setSelectedPage }: Props) {
         src="\assets\prof2-colored.png"
         alt="profile-photo"
       /> }
-        </div>
+        </motion.div>
 
 
 
         {/* RIGHT SECTION */}
-        <div className="flex justify-center xl:p-12 basis-1/2 gap-5 text-3xl font-normal">
+        <motion.div className="flex justify-center xl:p-12 basis-1/2 gap-5 text-3xl font-normal"
+        initial = 'hidden'
+        whileInView='visible'
+        viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
+        transition={{ duration: 1}}
+        variants={{
+         hidden: {opacity: 0, x: 200},
+         visible: {opacity: 1, x: 0}
+       }}
+        >
           <p className="text-sm md:text-xl xl:text-2xl">
-          Hello! My name is Mac and I enjoy creating things that live on the internet. My interest in web development started back in 2021 when I decided to try creating a landing page for my family's business.
+          Hello! My name is <span className="font-bold text-[#39709B] hover:scale-110">Mac</span> and I enjoy creating things that live on the internet. My interest in web development started back in 2021 when I decided to try creating a landing page for my family's business.
           Fast-forward to today, I decided to pursue my passion for constructing and developing innovative solutions through web development.
           I am committed to continuous learning and self-improvement in order to become a game-changer in the industry.
           </p>
-        </div>
+        </motion.div>
       </div>
       
-        <div className="mt-5 flex flex-col items-center justify-center gap-1  w-full  ">
+        <motion.div className="mt-5 flex flex-col items-center justify-center gap-1  w-full  "
+        initial = 'hidden'
+        whileInView='visible'
+        viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
+        transition={{delay:0.5, duration: 1}}
+        variants={{
+         hidden: {opacity: 0, x: 0},
+         visible: {opacity: 1, x: 0}
+       }}
+        >
       <p className="font-normal ">currently working on both</p>
       <p className=" text-xl md:text-3xl bg-gradient-to-r from-[#C9C0A5] to-[#2877b5] bg-clip-text text-transparent ">FRONT-END and BACK-END development.</p>
-        </div>
+        </motion.div>
       
     </section>
   );

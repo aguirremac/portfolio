@@ -6,6 +6,7 @@ import {
   ChevronDoubleDownIcon,
 } from "@heroicons/react/24/solid";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { motion } from "framer-motion";
 
 type Props = {
   setSelectedPage: (value: NavOptions) => void;
@@ -22,7 +23,19 @@ const Home = ({ setSelectedPage }: Props) => {
       } `}>
       {/* LEFT SECTION */}
 
-      <div className="flex xl:basis-1/3 flex-col items-center justify-center rounded-xl lg:bg-slate-800/10 font-mont text-[#C9C0A5] md:min-h-[35%]  md:p-10">
+      <motion.div
+       className="flex xl:basis-1/3 flex-col items-center justify-center rounded-xl lg:bg-slate-800/10 font-mont text-[#C9C0A5] md:min-h-[35%]  md:p-10"
+       initial = 'hidden'
+       whileInView='visible'
+       viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
+       transition={{duration: 0.5}}
+       variants={{
+        hidden: {opacity: 0, x: -200},
+        visible: {opacity: 1, x: 0}
+      }}
+       
+       
+       >
         <img
           className="h-[170px] md:h-[200px]"
           src="\assets\profile.png"
@@ -35,11 +48,21 @@ const Home = ({ setSelectedPage }: Props) => {
         <p className="text-xs font-light md:text-lg ">
           FRONT-END DEVELOPER • VIDEO EDITOR
         </p>
-      </div>
+      </motion.div>
 
       {/* RIGHT SECTION */}
-      <div className={`mt-5  xl:pl-20 flex xl:basis-2/3 flex-col ${isAboveMediumScreen ? 'items-start' : 'items-center'}  justify-start px-5   md:justify-center`}>
-        <p className="flex flex-col  items-center justify-center  italic text-[#C9C0A5] text-3xl md:text-4xl lg:text-5xl xl:text-[100px] lg:items-start">
+      <div className={`mt-5  xl:pl-20 flex xl:basis-2/3 flex-col ${isAboveMediumScreen ? 'items-start' : 'items-center'}  justify-start px-5   md:justify-center`}
+      
+      >
+        <motion.div className="flex flex-col  items-center justify-center  italic text-[#C9C0A5] text-3xl md:text-4xl lg:text-5xl xl:text-[100px] lg:items-start"
+        initial = 'hidden'
+        whileInView='visible'
+        viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
+        transition={{duration: 1}}
+        variants={{
+         hidden: {opacity: 0, x: 200},
+         visible: {opacity: 1, x: 0}
+        }}>
           Bringing your
           <p className="text-start lg:text-4xl xl:text-[70px] mt-2 flex">   
             <span className="inline-block hover:text-[#39709B] text-jelly">o</span>
@@ -65,16 +88,17 @@ const Home = ({ setSelectedPage }: Props) => {
             <span className="inline-block hover:text-[#39709B] text-jelly">e</span>
             <span className="inline-block hover:text-[#39709B] text-jelly">.</span>
             </p>
-
-        
-           
-            
-
-
-
-        </p>
-        <div className="mt-10 flex gap-2 bg-gradient-to-r from-[#C9C0A5] to-[#2877b5] bg-clip-text text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold text-transparent">
-          I
+        </motion.div>
+        <motion.div className="mt-10 flex gap-2 bg-gradient-to-r from-[#C9C0A5] to-[#2877b5] bg-clip-text text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold text-transparent"
+        initial = 'hidden'
+        whileInView='visible'
+        viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
+        transition={{duration: 1}}
+        variants={{
+         hidden: {opacity: 0, x: 200},
+         visible: {opacity: 1, x: 0}
+        }}>
+          I&nbsp; 
           <TypewriterComponent
             options={{
               strings: ["create.", "innovate.", "accomplish."],
@@ -82,8 +106,16 @@ const Home = ({ setSelectedPage }: Props) => {
               loop: true,
             }}
           />
-        </div>
-        <div className={`flex w-full ${isAboveMediumScreen ? "justify-start" : "justify-center"} `}>
+        </motion.div>
+        <motion.div className={`flex w-full ${isAboveMediumScreen ? "justify-start" : "justify-center"} `}
+        initial = 'hidden'
+        whileInView='visible'
+        viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
+        transition={{delay: 0.2, duration: 1.5}}
+        variants={{
+         hidden: {opacity: 0, x: 200},
+         visible: {opacity: 1, x: 0}
+        }}>
           <AnchorLink
           onClick={()=>setSelectedPage(NavOptions.About)}
           href={`#${NavOptions.About}`}
@@ -92,7 +124,7 @@ const Home = ({ setSelectedPage }: Props) => {
             Explore More
             <ChevronDoubleDownIcon className="h-[20px]" />
           </AnchorLink>
-        </div>
+        </motion.div>
       </div>
       </div>
       <hr className="w-5/6 mx-auto text-[#C9C0A5] opacity-20" />
