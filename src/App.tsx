@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import About from "./components/about/About";
 import Home from "./components/home/Home";
 import Navbar from "./components/nav/Navbar";
 import { NavOptions } from "./shared/types";
+
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<NavOptions>(NavOptions.Home);
@@ -19,14 +21,17 @@ function App() {
   }, []);
 
   return (
-    <div className="app bg-gradient-to-b from-black via-black to-emerald-900 text-center font-mont font-bold ">
+    <div className="app min-h-screen bg-gradient-to-br from-black via-black to-emerald-900 text-center font-mont font-bold ">
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-
+      
       <Home setSelectedPage={setSelectedPage} />
+      <About setSelectedPage={setSelectedPage} />
+      
+     
     </div>
   );
 }
