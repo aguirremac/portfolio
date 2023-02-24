@@ -22,7 +22,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
   return (
     <div
-      className={` ${style.flexBetween} ${NavbarBG} drop-shadow-md fixed top-0 z-30  h-[80px] w-full px-1 md:px-10 font-mont`}
+      className={` ${style.flexBetween} ${NavbarBG} drop-shadow-md fixed top-0 z-30 h-[60px] md:h-[80px] w-full px-1 md:px-10 font-mont`}
     >
       <div className={`${style.flexBetween} mx-auto w-11/12 md:w-5/6`}>
         <div>
@@ -140,6 +140,12 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
+
+          <button
+              className={` flex gap-2 rounded-xl border-2 ${isTopOfPage ? "border-[#C9C0A5]/60 text-[#C9C0A5]" : "border-[#416A59] text-[#416A59]"} py-2 px-3 text-sm  ${style.hoverBlue}`}
+            >
+              <ArrowDownTrayIcon className="h-[20px]" />Résumé
+            </button>
           </div>
         </div>
       </div>
