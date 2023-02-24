@@ -9,13 +9,16 @@ type Props = {
   
 };
 
-function About({ setSelectedPage }: Props) {
+const About = ({ setSelectedPage }: Props) => {
   const [hovered, setHovered] = useState<boolean>(false);
   const isAboveMediumScreen = useMediaQuery("(min-width:1060px)");
   const isMobileView = useMediaQuery("(max-width:640px)");
 
   return (
-    <section className="mx-auto flex flex-col justify-center items-center h-screen w-9/12  font-mont text-[#C9C0A5]">
+    <section>
+    <motion.div className="mx-auto pt-16 flex flex-col justify-center items-center h-[80%] w-9/12  font-mont text-[#C9C0A5]"
+    onViewportEnter={()=>setSelectedPage(NavOptions.About)}
+    >
       <motion.div className="flex justify-center w-full xl:mb-14"
       initial = 'hidden'
       whileInView='visible'
@@ -26,7 +29,7 @@ function About({ setSelectedPage }: Props) {
        visible: {opacity: 1, x: 0}
      }}
       >
-          <h1 className="text-3xl lg:text-5xl xl:text-7xl font-bold text-[#C9C0A5] ">
+          <h1 className="text-3xl md:text-5xl xl:text-7xl font-bold text-[#C9C0A5] ">
             <span className="inline-block hover:text-[#39709B] text-jelly">{"{"}</span>
             <span className="inline-block hover:text-[#39709B] text-jelly">.</span>
             <span className="inline-block hover:text-[#39709B] text-jelly">.</span>
@@ -102,7 +105,9 @@ function About({ setSelectedPage }: Props) {
       <p className="font-normal ">currently working on both</p>
       <p className=" text-xl md:text-3xl bg-gradient-to-r from-[#C9C0A5] to-[#2877b5] bg-clip-text text-transparent ">FRONT-END and BACK-END development.</p>
         </motion.div>
-      
+        
+    </motion.div>
+    <hr className="w-9/12 mt-32 mx-auto text-[#C9C0A5] opacity-20" />
     </section>
   );
 }
