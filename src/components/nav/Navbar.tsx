@@ -29,22 +29,22 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           {isTopOfPage ? (
             <div className="flex gap-1 md:gap-5 items-center">
             <img
-              src=".\src\assets\mac-agr-icon-slate.png"
+              src="\assets\mac-agr-icon-slate.png"
               className="h-[60px] md:h-[100px] cursor-pointer duration-300 ease-in-out active:scale-110 pr-5 md:pr-10"
               alt="logo"
             ></img>
-            <a href="https://www.linkedin.com/in/mark-john-aguirre-66464a136/"><img className="h-[20px] md:h-[30px] cursor-pointer" src=".\src\assets\linkedin-slate.png"></img></a>
-            <a href="https://github.com/aguirremac"><img className="h-[25px] md:h-[35px] cursor-pointer" src=".\src\assets\github-slate.png"></img></a>
+            <a href="https://www.linkedin.com/in/mark-john-aguirre-66464a136/"><img className="h-[20px] md:h-[30px] cursor-pointer" src="\assets\linkedin-slate.png"></img></a>
+            <a href="https://github.com/aguirremac"><img className="h-[25px] md:h-[35px] cursor-pointer" src="\assets\github-slate.png"></img></a>
             </div>
           ) : (
             <div className="flex gap-1 md:gap-5 items-center">
             <img
-              src=".\src\assets\mac-agr-icon.png"
+              src="\assets\mac-agr-icon.png"
               className="h-[60px] md:h-[100px] cursor-pointer duration-300 ease-in-out active:scale-110 pr-5 md:pr-10"
               alt="logo"
             ></img>
-            <a href="https://www.linkedin.com/in/mark-john-aguirre-66464a136/"><img className="h-[20px] md:h-[30px] cursor-pointer" src=".\src\assets\linkedin-green.png"></img></a>
-            <a href="https://github.com/aguirremac"><img className="h-[25px] md:h-[35px] cursor-pointer" src=".\src\assets\github-green.png"></img></a>
+            <a href="https://www.linkedin.com/in/mark-john-aguirre-66464a136/"><img className="h-[20px] md:h-[30px] cursor-pointer" src="\assets\linkedin-green.png"></img></a>
+            <a href="https://github.com/aguirremac"><img className="h-[25px] md:h-[35px] cursor-pointer" src="\assets\github-green.png"></img></a>
             </div>
           )}
         </div>

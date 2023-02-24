@@ -19,8 +19,8 @@ const Home = ({ setSelectedPage }: Props) => {
         
         {/* LEFT SECTION */}
     
-    <div className="text-[#C9C0A5] h-screen md:h-[35%] md:p-10 md:rounded-xl bg-black/20 flex flex-col items-center justify-end md:justify-center  font-mont">
-    <img className="h-[170px] md:h-[200px]" src=".\src\assets\profile.png" alt="profile-photo" />
+    <div className="text-[#C9C0A5] h-screen md:h-[35%] md:p-10 rounded-xl bg-black/20 flex flex-col items-center justify-end md:justify-center  font-mont">
+    <img className="h-[170px] md:h-[200px]" src="\assets\profile.png" alt="profile-photo" />
     <p className="flex gap-2 items-center justify-center text-2xl md:text-4xl font-bold">Mark John Aguirre <CheckCircleIcon className="text-[#39709B] h-[20px] md:h-[30px]" /></p>
     <p className="font-light text-xs md:text-lg ">FRONT-END DEVELOPER  •  VIDEO EDITOR</p>
     </div> 
