@@ -87,13 +87,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
         ) : (
           <div
             onClick={() => setShowSidebar(!showSidebar)}
-            className={`flex h-[30px] md:h-[40px] cursor-pointer  rounded-full p-2 ${
+            className={`flex items-center h-[30px] w-auto md:h-[40px] cursor-pointer font-bold  rounded-full p-[8px] md:p-3 ${
               isTopOfPage
                 ? "bg-[#C9C0A5] text-[#416A59]"
                 : "bg-[#416A59] text-[#C9C0A5]"
             }`}
           >
-            <RxHamburgerMenu />
+            <RxHamburgerMenu className="h-[20px]" />
           </div>
         )}
 
