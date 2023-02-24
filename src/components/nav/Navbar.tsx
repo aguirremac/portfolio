@@ -25,7 +25,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     <div
       className={` ${style.flexBetween} ${NavbarBG} drop-shadow-md fixed top-0 z-30 h-[60px] md:h-[80px] w-full px-1 md:px-10 font-mont`}
     >
-      <div className={`${style.flexBetween} mx-auto w-11/12 md:w-5/6`}>
+      <div className={`${style.flexBetween} mx-auto w-11/12 md:w-9/12`}>
         <div>
           {isTopOfPage ? (
             <div className="flex gap-4 md:gap-5 items-center">
