@@ -93,9 +93,9 @@ const Home = ({ setSelectedPage }: Props) => {
         initial = 'hidden'
         whileInView='visible'
         viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
-        transition={{duration: 1}}
+        transition={{ duration: 1}}
         variants={{
-         hidden: {opacity: 0, x: 200},
+         hidden: {opacity: 0, x: 50},
          visible: {opacity: 1, x: 0}
         }}>
           I&nbsp; 
@@ -111,9 +111,9 @@ const Home = ({ setSelectedPage }: Props) => {
         initial = 'hidden'
         whileInView='visible'
         viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
-        transition={{delay: 0.2, duration: 1.5}}
+        transition={{delay: 0.4, duration: 1}}
         variants={{
-         hidden: {opacity: 0, x: 200},
+         hidden: {opacity: 0, x: 50},
          visible: {opacity: 1, x: 0}
         }}>
           <AnchorLink
