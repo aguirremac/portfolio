@@ -33,7 +33,7 @@ const Skills = ({ setSelectedPage }: Props) => {
         </motion.p>
 
         {/* STACKS DIV */}
-        <div className=" mx-auto flex h-auto w-9/12 flex-wrap content-center items-center justify-between gap-2 rounded-3xl md:justify-center  md:gap-10 ">
+        <div className=" mx-auto flex h-auto w-9/12 flex-wrap content-center items-center justify-between gap-5 rounded-3xl md:justify-center  md:gap-10 ">
           {stacks.map((stack: StacksType, index: number) => {
             return (
               <motion.div
