@@ -113,8 +113,8 @@ const Home = ({ setSelectedPage }: Props) => {
         viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
         transition={{delay: 0.4, duration: 1}}
         variants={{
-         hidden: {opacity: 0, x: 50},
-         visible: {opacity: 1, x: 0}
+         hidden: {opacity: 0, y: 20},
+         visible: {opacity: 1, y: 0}
         }}>
           <AnchorLink
           onClick={()=>setSelectedPage(NavOptions.About)}
