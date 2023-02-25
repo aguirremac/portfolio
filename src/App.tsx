@@ -4,6 +4,7 @@ import Home from "./components/home/Home";
 import Navbar from "./components/nav/Navbar";
 import Projects from "./components/projects/Projects";
 import Skills from "./components/skills/Skills";
+import Contact from "./components/contact/Contact";
 import { NavOptions } from "./shared/types";
 
 
@@ -34,6 +35,8 @@ function App() {
       <About setSelectedPage={setSelectedPage} />
       <Skills setSelectedPage={setSelectedPage} />
       <Projects setSelectedPage={setSelectedPage} />
+      <Contact setSelectedPage={setSelectedPage} />
+      
       
      
     </div>

@@ -2,6 +2,7 @@ import { NavOptions, ProjectsType } from "../../shared/types";
 import { motion } from "framer-motion";
 import { projectData } from "./projectData";
 import {useState} from 'react'
+import HText from "../../shared/HText";
 
 type Props = {
   setSelectedPage: (value: NavOptions) => void;
@@ -12,19 +13,21 @@ const Projects = ({ setSelectedPage }: Props) => {
     const [clickedIndex, setClickedIndex] = useState<number | null>(null)
     
   return (
-    <section onClick={(e)=> setClickedIndex(null)} >
+    <section id="projects" onClick={(e)=> setClickedIndex(null)} >
       <motion.div
         className="relative mx-auto flex h-fit w-11/12 md:w-9/12 flex-col  py-32 font-mont"
         onViewportEnter={() => setSelectedPage(NavOptions.Projects)}
       >
         {/* container of project cards */}
         <div className="mx-auto flex w-full flex-col items-center justify-center gap-8 rounded-xl bg-black/50 py-10">
-          <div className="bg-gradient-to-r from-[#C9C0A5] to-[#2877b5] bg-clip-text px-5 text-xl text-transparent md:text-2xl ">
+          <HText>
+            <div className="px-5 text-xl md:text-2xl ">
             <p className="mb-2 text-3xl xl:text-4xl 2xl:text-5xl font-bold">PROJECTS</p>
             <p className="text-xs xl:text-xl font-medium">
               HERE ARE SOME THINGS I'VE BUILT:
             </p>
           </div>
+          </HText> 
           {/* LISTA PROJECT */}
           {projectData.map((project: ProjectsType, index: number) => (
             <motion.div onClick={(e)=> {

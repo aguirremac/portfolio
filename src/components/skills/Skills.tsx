@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { StacksType } from "../../shared/types";
 import { useState } from "react";
 import { stacks } from "./Stacks";
+import HText from "../../shared/HText";
 
 type Props = {
   setSelectedPage: (value: NavOptions) => void;
@@ -28,13 +29,13 @@ const Skills = ({ setSelectedPage }: Props) => {
 
   return (
     <section>
-      <div
+      <motion.div id="skills"
         className="md:9/12 mx-auto flex  flex-col content-center items-center justify-center py-32 font-mont text-[#C9C0A5]"
         onViewportEnter={() => setSelectedPage(NavOptions.Skills)}
       >
         {/* TITLE TAG */}
-        <motion.p
-          className="bg-gradient-to-r from-[#C9C0A5] to-[#2877b5] bg-clip-text px-5 text-xl text-transparent md:text-2xl "
+       <HText> <motion.p
+          className="px-5 text-xl  md:text-2xl"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -45,7 +46,7 @@ const Skills = ({ setSelectedPage }: Props) => {
           }}
         >
           TECHNOLOGIES THAT I'VE BEEN WORKING WITH:
-        </motion.p>
+        </motion.p></HText>
 
         {/* STACKS DIV */}
         <motion.div className=" mx-auto flex h-auto w-9/12 flex-wrap content-center items-center justify-between gap-5 rounded-3xl md:justify-center  md:gap-10"
@@ -79,7 +80,7 @@ const Skills = ({ setSelectedPage }: Props) => {
             );
           })}
         </motion.div>
-      </div>
+      </motion.div>
       <hr className="mx-auto w-9/12 text-[#C9C0A5] opacity-20" />
     </section>
   );

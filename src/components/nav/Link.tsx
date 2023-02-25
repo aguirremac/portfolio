@@ -13,7 +13,7 @@ const lowerCasePage = page.toLowerCase().replace(/ /g, "") as NavOptions;
 
 return (
     <AnchorLink className={`
-        ${selectedPage === lowerCasePage ? "text-[#39709B]" : ""}  transition duration-500 hover:text-blue-400`} 
+        ${selectedPage === lowerCasePage ? "text-[#39709B] border-b-2 border-[#39709B]" : ""}  transition duration-500 hover:text-blue-400 `} 
         href={`#${lowerCasePage}`}
         onClick={() => setSelectedPage(lowerCasePage)}
     >   {page}

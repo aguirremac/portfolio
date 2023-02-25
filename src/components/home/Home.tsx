@@ -7,6 +7,7 @@ import {
 } from "@heroicons/react/24/solid";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
+import HText from "../../shared/HText";
 
 type Props = {
   setSelectedPage: (value: NavOptions) => void;
@@ -16,7 +17,7 @@ const Home = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreen = useMediaQuery("(min-width:1060px)");
 
   return (
-    <section>
+    <section id="home">
 
       <div className={`mx-auto flex items-center h-screen justify-center  w-full md:w-9/12 gap-5 lg:gap-10   ${
         isAboveMediumScreen ? "2xl:gap-32 " : "flex-col"
@@ -89,7 +90,8 @@ const Home = ({ setSelectedPage }: Props) => {
             <span className="inline-block hover:text-red-500 text-jelly">.</span>
             </p>
         </motion.div>
-        <motion.div className="mt-10 flex gap-2 bg-gradient-to-r from-[#C9C0A5] to-[#2877b5] bg-clip-text text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold text-transparent"
+        <HText>
+        <motion.div className="mt-10 flex gap-2  text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold"
         initial = 'hidden'
         whileInView='visible'
         viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
@@ -107,6 +109,7 @@ const Home = ({ setSelectedPage }: Props) => {
             }}
           />
         </motion.div>
+        </HText>
         <motion.div className={`flex w-full ${isAboveMediumScreen ? "justify-start" : "justify-center"} `}
         initial = 'hidden'
         whileInView='visible'

@@ -2,6 +2,7 @@ import {useState} from "react";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { NavOptions } from "../../shared/types";
 import { motion } from "framer-motion";
+import HText from "../../shared/HText";
 
 
 type Props = {
@@ -15,7 +16,7 @@ const About = ({ setSelectedPage }: Props) => {
   const isMobileView = useMediaQuery("(max-width:640px)");
 
   return (
-    <section>
+    <section id="about">
     <motion.div className="mx-auto py-32 flex flex-col justify-center items-center  w-9/12  font-mont text-[#C9C0A5]"
     onViewportEnter={()=>setSelectedPage(NavOptions.About)}
     >
@@ -98,12 +99,16 @@ const About = ({ setSelectedPage }: Props) => {
         viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
         transition={{delay:0.2, duration: 1}}
         variants={{
-         hidden: {opacity: 0, x: 0},
-         visible: {opacity: 1, x: 0}
+         hidden: {opacity: 0, y: 50},
+         visible: {opacity: 1, y: 0}
        }}
         >
       <p className="font-normal ">currently working on both</p>
-      <p className=" text-xl md:text-3xl bg-gradient-to-r from-[#C9C0A5] to-[#2877b5] bg-clip-text text-transparent ">FRONT-END and BACK-END development.</p>
+      
+      <HText>
+      <p className=" text-xl md:text-3xl ">FRONT-END and BACK-END development.</p>
+      </HText>
+
         </motion.div>
         
     </motion.div>
