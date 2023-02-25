@@ -4,6 +4,7 @@ import Link from "./Link";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { NavOptions } from "../../shared/types";
 import {RxHamburgerMenu} from 'react-icons/rx';
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 type Props = {
   isTopOfPage: boolean;
@@ -20,20 +21,26 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
   const isAboveMediumScreen = useMediaQuery("(min-width:1060px)");
   const NavbarBG = `${isTopOfPage ? "" : "bg-[#C9C0A5]/90 duration-500  "}`;
+  console.log(NavOptions.Home)
+
 
   return (
-    <div
+    <div 
       className={` ${style.flexBetween} ${NavbarBG} drop-shadow-md fixed top-0 z-30 h-[60px] md:h-[80px] w-full px-1 md:px-10 font-mont`}
     >
       <div className={`${style.flexBetween} mx-auto w-11/12 md:w-9/12`}>
         <div>
           {isTopOfPage ? (
             <div className="flex gap-4 md:gap-5 items-center">
-            <img
+            <AnchorLink 
+            onClick={()=>setSelectedPage(NavOptions.Home)}
+            href={`#${NavOptions.Home}`}>
+              <img 
               src="\assets\mac-agr-icon-slate.png"
               className="h-[60px] md:h-[100px] cursor-pointer duration-300 ease-in-out active:scale-110 pr-5 md:pr-10"
               alt="logo"
-            ></img>
+            ></img> 
+            </AnchorLink>
             <a href="https://www.linkedin.com/in/mark-john-aguirre-66464a136/"><img className="h-[20px] md:h-[30px] cursor-pointer" src="\assets\linkedin-slate.png"></img></a>
             <a href="https://github.com/aguirremac"><img className="h-[25px] md:h-[35px] cursor-pointer" src="\assets\github-slate.png"></img></a>
             </div>
