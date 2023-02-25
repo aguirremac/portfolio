@@ -9,38 +9,38 @@ export const stacks: Array<StacksType> = [
     },
     {   
         title: "CSS",
-        imgGreen: "/public/assets/css-green.png",
-        imgOrig: "/public/assets/css.png",
+        imgGreen: "/assets/css-green.png",
+        imgOrig: "/assets/css.png",
     },
     {   
         title: "JavaScript",
-        imgGreen: "/public/assets/js-green.png",
-        imgOrig: "/public/assets/js.png",
+        imgGreen: "/assets/js-green.png",
+        imgOrig: "/assets/js.png",
     },
     {   
         title: "TypeScript",
-        imgGreen: "/public/assets/ts-green.png",
+        imgGreen: "/assets/ts-green.png",
         imgOrig: "/public/assets/ts.png",
     },
     {   
         title: "React",
-        imgGreen: "/public/assets/react-green.png",
-        imgOrig: "/public/assets/react.png",
+        imgGreen: "/assets/react-green.png",
+        imgOrig: "/assets/react.png",
     },
     {   
         title: "Tailwind",
-        imgGreen: "/public/assets/tailwind-green.png",
-        imgOrig: "/public/assets/tailwind.png",
+        imgGreen: "/assets/tailwind-green.png",
+        imgOrig: "/assets/tailwind.png",
     },
     {   
         title: "Firebase",
-        imgGreen: "/public/assets/firebase-green.png",
-        imgOrig: "/public/assets/firebase.png",
+        imgGreen: "/assets/firebase-green.png",
+        imgOrig: "/assets/firebase.png",
     },
     {   
         title: "Git",
-        imgGreen: "/public/assets/git-green.png",
-        imgOrig: "/public/assets/git.png",
+        imgGreen: "/assets/git-green.png",
+        imgOrig: "/assets/git.png",
     },
 
 
