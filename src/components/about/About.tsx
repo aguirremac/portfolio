@@ -96,7 +96,7 @@ const About = ({ setSelectedPage }: Props) => {
         initial = 'hidden'
         whileInView='visible'
         viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
-        transition={{delay:0.5, duration: 1}}
+        transition={{delay:0.2, duration: 1}}
         variants={{
          hidden: {opacity: 0, x: 0},
          visible: {opacity: 1, x: 0}
