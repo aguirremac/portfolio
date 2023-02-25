@@ -44,7 +44,7 @@ const Skills = ({ setSelectedPage }: Props) => {
         {stacks.map((stack:StacksType, index:number) => {
             return (
             <div key={index} className="bg-[#C9C0A5] rounded-lg w-[130px] h-[160px] mt-10 cursor-pointer flex flex-col justify-items-center item-center ">
-          <img onMouseEnter={()=>setHoveredIndex(index)} onMouseLeave={()=>setHoveredIndex(null)} className="rounded-t-lg" src={hoveredIndex === index ? stack.imgOrig : stack.imgGreen} alt={stack.title} />
+          <img onTouchStart={()=>setHoveredIndex(index)} onTouchEnd={()=>setHoveredIndex(null)}  onMouseEnter={()=>setHoveredIndex(index)} onMouseLeave={()=>setHoveredIndex(null)} className="rounded-t-lg" src={hoveredIndex === index ? stack.imgOrig : stack.imgGreen} alt={stack.title} />
           <p className="text-[#1C1F1B] text-md pb-2">{stack.title.toLocaleUpperCase()}</p>
         </div>
         )})

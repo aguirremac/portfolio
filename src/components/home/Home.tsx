@@ -65,28 +65,28 @@ const Home = ({ setSelectedPage }: Props) => {
         }}>
           Bringing your
           <p className="text-start lg:text-4xl xl:text-[70px] mt-2 flex">   
-            <span className="inline-block hover:text-[#39709B] text-jelly">o</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">n</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">l</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">i</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">n</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">e</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">&nbsp;</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">v</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">i</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">s</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">i</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">o</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">n</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">&nbsp;</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">t</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">o</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">&nbsp;</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">l</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">i</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">f</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">e</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">.</span>
+            <span className="inline-block hover:text-red-500 text-jelly">o</span>
+            <span className="inline-block hover:text-red-500 text-jelly">n</span>
+            <span className="inline-block hover:text-red-500 text-jelly">l</span>
+            <span className="inline-block hover:text-red-500 text-jelly">i</span>
+            <span className="inline-block hover:text-red-500 text-jelly">n</span>
+            <span className="inline-block hover:text-red-500 text-jelly">e</span>
+            <span className="inline-block hover:text-red-500 text-jelly">&nbsp;</span>
+            <span className="inline-block hover:text-red-500 text-jelly">v</span>
+            <span className="inline-block hover:text-red-500 text-jelly">i</span>
+            <span className="inline-block hover:text-red-500 text-jelly">s</span>
+            <span className="inline-block hover:text-red-500 text-jelly">i</span>
+            <span className="inline-block hover:text-red-500 text-jelly">o</span>
+            <span className="inline-block hover:text-red-500 text-jelly">n</span>
+            <span className="inline-block hover:text-red-500 text-jelly">&nbsp;</span>
+            <span className="inline-block hover:text-red-500 text-jelly">t</span>
+            <span className="inline-block hover:text-red-500 text-jelly">o</span>
+            <span className="inline-block hover:text-red-500 text-jelly">&nbsp;</span>
+            <span className="inline-block hover:text-red-500 text-jelly">l</span>
+            <span className="inline-block hover:text-red-500 text-jelly">i</span>
+            <span className="inline-block hover:text-red-500 text-jelly">f</span>
+            <span className="inline-block hover:text-red-500 text-jelly">e</span>
+            <span className="inline-block hover:text-red-500 text-jelly">.</span>
             </p>
         </motion.div>
         <motion.div className="mt-10 flex gap-2 bg-gradient-to-r from-[#C9C0A5] to-[#2877b5] bg-clip-text text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold text-transparent"

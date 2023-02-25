@@ -19,5 +19,8 @@ export interface ProjectsType {
     title: string;
     img: string;
     imgHovered: string;
+    stacks: Array<string>;
+    githubLink: string;
+    liveURL: string;
     description: string;
 }
