@@ -18,8 +18,8 @@ const Home = ({ setSelectedPage }: Props) => {
   return (
     <section>
 
-      <div className={`mx-auto flex items-center h-screen justify-center  w-full md:w-9/12 gap-5 lg:gap-20   ${
-        isAboveMediumScreen ? "xl:gap-15 " : "flex-col"
+      <div className={`mx-auto flex items-center h-screen justify-center  w-full md:w-9/12 gap-5 lg:gap-10   ${
+        isAboveMediumScreen ? "2xl:gap-32 " : "flex-col"
       } `}>
       {/* LEFT SECTION */}
 
@@ -37,7 +37,7 @@ const Home = ({ setSelectedPage }: Props) => {
        
        >
         <img
-          className="h-[170px] md:h-[200px]"
+          className="h-[120px] md:h-[150px]"
           src="\assets\profile.png"
           alt="profile-photo"
         />
@@ -51,10 +51,10 @@ const Home = ({ setSelectedPage }: Props) => {
       </motion.div>
 
       {/* RIGHT SECTION */}
-      <div className={`mt-5  xl:pl-20 flex xl:basis-2/3 flex-col ${isAboveMediumScreen ? 'items-start' : 'items-center'}  justify-start px-5   md:justify-center`}
+      <div className={`mt-5  flex xl:basis-2/3 flex-col ${isAboveMediumScreen ? 'items-start' : 'items-center'}  justify-start px-5   md:justify-center`}
       
       >
-        <motion.div className="flex flex-col  items-center justify-center  italic text-[#C9C0A5] text-3xl md:text-4xl lg:text-5xl xl:text-[100px] lg:items-start"
+        <motion.div className="flex flex-col  items-center justify-center  italic text-[#C9C0A5] text-3xl md:text-4xl lg:text-5xl xl:text-[70px] lg:items-start"
         initial = 'hidden'
         whileInView='visible'
         viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
@@ -65,28 +65,28 @@ const Home = ({ setSelectedPage }: Props) => {
         }}>
           Bringing your
           <p className="text-start lg:text-4xl xl:text-[70px] mt-2 flex">   
-            <span className="inline-block hover:text-[#39709B] text-jelly">o</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">n</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">l</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">i</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">n</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">e</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">&nbsp;</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">v</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">i</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">s</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">i</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">o</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">n</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">&nbsp;</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">t</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">o</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">&nbsp;</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">l</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">i</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">f</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">e</span>
-            <span className="inline-block hover:text-[#39709B] text-jelly">.</span>
+            <span className="inline-block hover:text-red-500 text-jelly">o</span>
+            <span className="inline-block hover:text-red-500 text-jelly">n</span>
+            <span className="inline-block hover:text-red-500 text-jelly">l</span>
+            <span className="inline-block hover:text-red-500 text-jelly">i</span>
+            <span className="inline-block hover:text-red-500 text-jelly">n</span>
+            <span className="inline-block hover:text-red-500 text-jelly">e</span>
+            <span className="inline-block hover:text-red-500 text-jelly">&nbsp;</span>
+            <span className="inline-block hover:text-red-500 text-jelly">v</span>
+            <span className="inline-block hover:text-red-500 text-jelly">i</span>
+            <span className="inline-block hover:text-red-500 text-jelly">s</span>
+            <span className="inline-block hover:text-red-500 text-jelly">i</span>
+            <span className="inline-block hover:text-red-500 text-jelly">o</span>
+            <span className="inline-block hover:text-red-500 text-jelly">n</span>
+            <span className="inline-block hover:text-red-500 text-jelly">&nbsp;</span>
+            <span className="inline-block hover:text-red-500 text-jelly">t</span>
+            <span className="inline-block hover:text-red-500 text-jelly">o</span>
+            <span className="inline-block hover:text-red-500 text-jelly">&nbsp;</span>
+            <span className="inline-block hover:text-red-500 text-jelly">l</span>
+            <span className="inline-block hover:text-red-500 text-jelly">i</span>
+            <span className="inline-block hover:text-red-500 text-jelly">f</span>
+            <span className="inline-block hover:text-red-500 text-jelly">e</span>
+            <span className="inline-block hover:text-red-500 text-jelly">.</span>
             </p>
         </motion.div>
         <motion.div className="mt-10 flex gap-2 bg-gradient-to-r from-[#C9C0A5] to-[#2877b5] bg-clip-text text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold text-transparent"
