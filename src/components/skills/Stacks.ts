@@ -4,8 +4,8 @@ export const stacks: Array<StacksType> = [
 
     {  
         title: "HTML",
-        imgGreen: "/public/assets/html-green.png",
-        imgOrig: "/public/assets/html.png",
+        imgGreen: "/assets/html-green.png",
+        imgOrig: "/assets/html.png",
     },
     {   
         title: "CSS",
@@ -20,7 +20,7 @@ export const stacks: Array<StacksType> = [
     {   
         title: "TypeScript",
         imgGreen: "/assets/ts-green.png",
-        imgOrig: "/public/assets/ts.png",
+        imgOrig: "/assets/ts.png",
     },
     {   
         title: "React",
