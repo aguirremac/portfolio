@@ -21,7 +21,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
   const isAboveMediumScreen = useMediaQuery("(min-width:1060px)");
   const NavbarBG = `${isTopOfPage ? "" : "bg-[#C9C0A5]/90 duration-500  "}`;
-  console.log(NavOptions.Home)
+  
+  
+  const resumeLink = "https://drive.google.com/file/d/1E-tHpLgyQxONDOsgW7EWNqxaz4qKl70k/view?usp=share_link"
 
 
   return (
@@ -86,9 +88,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             />
 
             <button
-              className={` flex gap-2 rounded-xl border-2 ${isTopOfPage ? "border-[#C9C0A5]/60 text-[#C9C0A5]" : "border-[#416A59] text-[#416A59]"} py-2 px-3 text-sm  ${style.hoverBlue}`}
+              className={` rounded-xl border-2 ${isTopOfPage ? "border-[#C9C0A5]/60 text-[#C9C0A5]" : "border-[#416A59] text-[#416A59]"} py-2 px-3 text-sm  ${style.hoverBlue}`}
             >
-              <ArrowDownTrayIcon className="h-[20px]" />Résumé
+              <a className="flex gap-2" href={resumeLink}>
+              <ArrowDownTrayIcon className="h-[20px]" />Résumé</a>
             </button>
           </div>
         ) : (
@@ -150,9 +153,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             />
 
           <button
-              className={` flex gap-2 rounded-xl border-2 border-[#416A59] text-[#416A59] py-2 px-3 text-sm  ${style.hoverBlue}`}
-            >
-              <ArrowDownTrayIcon className="h-[20px]" />Résumé
+              className={`  rounded-xl border-2 border-[#416A59] text-[#416A59] py-2 px-3 text-sm  ${style.hoverBlue}`}
+            ><a className="flex gap-2" href={resumeLink}>
+              <ArrowDownTrayIcon className="h-[20px]" />Résumé</a>
             </button>
           </div>
         </div>
