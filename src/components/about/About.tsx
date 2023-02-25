@@ -16,7 +16,7 @@ const About = ({ setSelectedPage }: Props) => {
 
   return (
     <section>
-    <motion.div className="mx-auto pt-16 flex flex-col justify-center items-center h-[80%] w-9/12  font-mont text-[#C9C0A5]"
+    <motion.div className="mx-auto py-32 flex flex-col justify-center items-center  w-9/12  font-mont text-[#C9C0A5]"
     onViewportEnter={()=>setSelectedPage(NavOptions.About)}
     >
       <motion.div className="flex justify-center w-full xl:mb-14"
@@ -107,7 +107,7 @@ const About = ({ setSelectedPage }: Props) => {
         </motion.div>
         
     </motion.div>
-    <hr className="w-9/12 mt-32 mx-auto text-[#C9C0A5] opacity-20" />
+    <hr className="w-9/12  mx-auto text-[#C9C0A5] opacity-20" />
     </section>
   );
 }

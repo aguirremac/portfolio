@@ -14,3 +14,10 @@ export interface StacksType {
     imgGreen: string;
     imgOrig: string;
 }
+
+export interface ProjectsType {
+    title: string;
+    img: string;
+    imgHovered: string;
+    description: string;
+}

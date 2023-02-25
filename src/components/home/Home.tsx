@@ -18,8 +18,8 @@ const Home = ({ setSelectedPage }: Props) => {
   return (
     <section>
 
-      <div className={`mx-auto flex items-center h-screen justify-center  w-full md:w-9/12 gap-5 lg:gap-20   ${
-        isAboveMediumScreen ? "xl:gap-15 " : "flex-col"
+      <div className={`mx-auto flex items-center h-screen justify-center  w-full md:w-9/12 gap-5 lg:gap-10   ${
+        isAboveMediumScreen ? "2xl:gap-32 " : "flex-col"
       } `}>
       {/* LEFT SECTION */}
 
@@ -37,7 +37,7 @@ const Home = ({ setSelectedPage }: Props) => {
        
        >
         <img
-          className="h-[170px] md:h-[200px]"
+          className="h-[120px] md:h-[150px]"
           src="\assets\profile.png"
           alt="profile-photo"
         />
@@ -51,10 +51,10 @@ const Home = ({ setSelectedPage }: Props) => {
       </motion.div>
 
       {/* RIGHT SECTION */}
-      <div className={`mt-5  xl:pl-20 flex xl:basis-2/3 flex-col ${isAboveMediumScreen ? 'items-start' : 'items-center'}  justify-start px-5   md:justify-center`}
+      <div className={`mt-5  flex xl:basis-2/3 flex-col ${isAboveMediumScreen ? 'items-start' : 'items-center'}  justify-start px-5   md:justify-center`}
       
       >
-        <motion.div className="flex flex-col  items-center justify-center  italic text-[#C9C0A5] text-3xl md:text-4xl lg:text-5xl xl:text-[100px] lg:items-start"
+        <motion.div className="flex flex-col  items-center justify-center  italic text-[#C9C0A5] text-3xl md:text-4xl lg:text-5xl xl:text-[70px] lg:items-start"
         initial = 'hidden'
         whileInView='visible'
         viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
