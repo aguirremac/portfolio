@@ -14,7 +14,7 @@ type Props = {
 
 const style = {
   flexBetween: `flex items-center justify-between`,
-  hoverBlue: `transition duration-100 ease-in-out hover:bg-gradient-to-r hover:from-[#1C1F1B] hover:to-[#2877b5] hover:border-[#1C1F1B]  cursor-pointer  hover:text-[#c9c0a5] active:scale-110`,
+  hoverBlue: `transition duration-100 ease-in-out hover:bg-gradient-to-r hover:from-[#C9C0A5] hover:to-[#2877b5] hover:border-[#39709B]/20  cursor-pointer  hover:text-[#1C1F1B] active:scale-110`,
 };
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
@@ -23,7 +23,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const NavbarBG = `${isTopOfPage ? "" : "bg-[#C9C0A5]/90 duration-500  "}`;
   
   
-  const resumeLink = "https://drive.google.com/file/d/1E-tHpLgyQxONDOsgW7EWNqxaz4qKl70k/view?usp=share_link"
+  const resumeLink = "https://drive.google.com/file/d/1wJq9-VfLlhuo4lhVgWTOv6GEIBEwXDWN/view?usp=share_link"
 
 
   return (
@@ -43,8 +43,8 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               alt="logo"
             ></img> 
             </AnchorLink>
-            <a href="https://www.linkedin.com/in/mark-john-aguirre-66464a136/"><img className="h-[20px] md:h-[30px] cursor-pointer" src="\assets\linkedin-slate.png"></img></a>
-            <a href="https://github.com/aguirremac"><img className="h-[25px] md:h-[35px] cursor-pointer" src="\assets\github-slate.png"></img></a>
+            <a target="_blank" href="https://www.linkedin.com/in/mark-john-aguirre-66464a136/"><img className="h-[20px] md:h-[30px] cursor-pointer" src="\assets\linkedin-slate.png"></img></a>
+            <a target="_blank" href="https://github.com/aguirremac"><img className="h-[25px] md:h-[35px] cursor-pointer" src="\assets\github-slate.png"></img></a>
             </div>
           ) : (
             <div className="flex gap-4 md:gap-5 lg:gap-1 xl:gap-5 items-center">
@@ -53,8 +53,8 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               className="h-[60px] md:h-[100px] cursor-pointer duration-300 ease-in-out active:scale-110 pr-5 md:pr-10 lg:pr-2 xl:pr-10"
               alt="logo"
             ></img>
-            <a href="https://www.linkedin.com/in/mark-john-aguirre-66464a136/"><img className="h-[20px] md:h-[30px] cursor-pointer" src="\assets\linkedin-green.png"></img></a>
-            <a href="https://github.com/aguirremac"><img className="h-[25px] md:h-[35px] cursor-pointer" src="\assets\github-green.png"></img></a>
+            <a target="_blank" href="https://www.linkedin.com/in/mark-john-aguirre-66464a136/"><img className="h-[20px] md:h-[30px] cursor-pointer" src="\assets\linkedin-green.png"></img></a>
+            <a target="_blank" href="https://github.com/aguirremac"><img className="h-[25px] md:h-[35px] cursor-pointer" src="\assets\github-green.png"></img></a>
             </div>
           )}
         </div>
@@ -90,7 +90,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             <button
               className={` rounded-xl border-2 ${isTopOfPage ? "border-[#C9C0A5]/60 text-[#C9C0A5]" : "border-[#416A59] text-[#416A59]"} py-2 px-3 text-sm  ${style.hoverBlue}`}
             >
-              <a className="flex gap-2" href={resumeLink}>
+              <a target="_blank" className="flex gap-2" href={resumeLink}>
               <ArrowDownTrayIcon className="h-[20px]" />Résumé</a>
             </button>
           </div>
@@ -154,7 +154,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
           <button
               className={`  rounded-xl border-2 border-[#416A59] text-[#416A59] py-2 px-3 text-sm  ${style.hoverBlue}`}
-            ><a className="flex gap-2" href={resumeLink}>
+            ><a target="_blank" className="flex gap-2" href={resumeLink}>
               <ArrowDownTrayIcon className="h-[20px]" />Résumé</a>
             </button>
           </div>

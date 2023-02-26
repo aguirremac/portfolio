@@ -24,6 +24,13 @@ const Projects = ({ setSelectedPage }: Props) => {
       ease: "easeInOut",
     };
 
+const handleHoverIn = (index:number) => {
+  setTimeout(()=> {
+    setHoveredProjIndex(index);
+  },200)
+}
+
+
 
   return (
     <section id="projects" >
@@ -44,7 +51,7 @@ const Projects = ({ setSelectedPage }: Props) => {
           {/* LISTA PROJECT */}
           {projectData.map((project: ProjectsType, index: number) => (
             <motion.div
-                 onMouseEnter={(e)=> setHoveredProjIndex(index) }
+                 onMouseEnter={(e)=> handleHoverIn(index) }
                  onMouseLeave={(e)=> setHoveredProjIndex(null) }  
                 key={index} className="relative flex w-[80%] flex-col  md:flex-row items-center justify-between md:justify-center  bg-gradient-to-r from-[#C9C0A5] to-[#2877b5] drop-shadow-xl  rounded-md cursor-pointer"
                 initial="hidden"
@@ -62,7 +69,7 @@ const Projects = ({ setSelectedPage }: Props) => {
                 
                 {/* backdrop demo/code */}
                 {hoveredProjIndex === index && 
-                <div className="flex gap-5 justify-center items-center absolute top-0 right-0 left-0 bottom-0 bg-black/90  z-30 font-semibold rounded-md ">
+                <div className="flex gap-5 justify-center items-center absolute top-0 right-0 left-0 bottom-0 bg-black/60   z-30 font-semibold rounded-md  ">
                     <a href={project.liveURL}><p className=" rounded-md px-2 py-1 cursor-pointer btn-grad-light ">DEMO</p> </a>
                     <a href={project.githubLink}><p className=" rounded-md px-2 py-1 cursor-pointer btn-grad-light ">CODE</p></a>
                 </div>}
