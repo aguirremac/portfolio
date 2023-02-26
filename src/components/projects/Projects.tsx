@@ -11,6 +11,20 @@ type Props = {
 const Projects = ({ setSelectedPage }: Props) => {
     const [hoveredProjIndex, setHoveredProjIndex] = useState<number | null>(null)
     
+
+    // looped animation variants
+    const animationVariants = {
+      start: { scale: 1 },
+      end: { scale: 1.1 },
+    };
+  
+    const animationTransition = {
+      duration: 2,
+      repeat: Infinity,
+      ease: "easeInOut",
+    };
+
+
   return (
     <section id="projects" >
       <motion.div
@@ -54,7 +68,11 @@ const Projects = ({ setSelectedPage }: Props) => {
                 </div>}
 
                 
-                <img  
+                <motion.img
+                  variants={animationVariants}
+                  transition={animationTransition}
+                  initial="start"
+                  animate="end" 
                   className=" h-[200px] md:h-[250px] lg:h-[300px] cursor-pointer hover:scale-105   duration-300"
                   src={project.imgHovered}
                   alt={project.title}
