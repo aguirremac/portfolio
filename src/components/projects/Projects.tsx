@@ -28,7 +28,7 @@ const Projects = ({ setSelectedPage }: Props) => {
   return (
     <section id="projects" >
       <motion.div
-        className="relative mx-auto flex h-fit w-11/12 md:w-9/12 flex-col  py-32 font-mont"
+        className="mx-auto flex h-fit w-11/12 md:w-9/12 flex-col  py-32 font-mont"
         onViewportEnter={() => setSelectedPage(NavOptions.Projects)}
       >
         {/* container of project cards */}
@@ -46,7 +46,7 @@ const Projects = ({ setSelectedPage }: Props) => {
             <motion.div
                  onMouseEnter={(e)=> setHoveredProjIndex(index) }
                  onMouseLeave={(e)=> setHoveredProjIndex(null) }  
-                key={index} className="flex w-[80%] flex-col  md:flex-row items-center justify-between md:justify-center  bg-gradient-to-r from-[#C9C0A5] to-[#2877b5] drop-shadow-xl  rounded-md cursor-pointer"
+                key={index} className="relative flex w-[80%] flex-col  md:flex-row items-center justify-between md:justify-center  bg-gradient-to-r from-[#C9C0A5] to-[#2877b5] drop-shadow-xl  rounded-md cursor-pointer"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
@@ -62,7 +62,7 @@ const Projects = ({ setSelectedPage }: Props) => {
                 
                 {/* backdrop demo/code */}
                 {hoveredProjIndex === index && 
-                <div className="flex gap-5 justify-center items-center absolute top-0 right-0 left-0 bottom-0 bg-black/90  z-30 font-semibold ">
+                <div className="flex gap-5 justify-center items-center absolute top-0 right-0 left-0 bottom-0 bg-black/90  z-30 font-semibold rounded-md ">
                     <a href={project.liveURL}><p className=" rounded-md px-2 py-1 cursor-pointer btn-grad-light ">DEMO</p> </a>
                     <a href={project.githubLink}><p className=" rounded-md px-2 py-1 cursor-pointer btn-grad-light ">CODE</p></a>
                 </div>}
