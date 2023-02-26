@@ -45,3 +45,24 @@ export const stacks: Array<StacksType> = [
 
 
 ]
+
+export const learningStacks: Array<StacksType> = [
+
+    {  
+        title: "NodeJS",
+        imgGreen: "/assets/nodejs-green.png",
+        imgOrig: "/assets/nodejs.png",
+    },
+    {  
+        title: "Express",
+        imgGreen: "/assets/express-green.png",
+        imgOrig: "/assets/express.png",
+    },
+    {  
+        title: "MongoDB",
+        imgGreen: "/assets/mongodb-green.png",
+        imgOrig: "/assets/mongodb.png",
+    },
+
+
+]
