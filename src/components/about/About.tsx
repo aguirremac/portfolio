@@ -86,8 +86,7 @@ const About = ({ setSelectedPage }: Props) => {
        }}
         >
           <p className="text-sm md:text-xl xl:text-2xl">
-          Hello! My name is <span className="font-bold text-[#39709B] hover:scale-110">Mac</span> and I enjoy creating things that live on the internet. My interest in web development started back in 2021 when I decided to try creating a landing page for my family's business.
-          Fast-forward to today, I decided to pursue my passion for constructing and developing innovative solutions through web development.
+          Hi there! I'm <span className="font-bold bg-gradient-to-r from-[#C9C0A5] to-[#2877b5] bg-clip-text text-transparent">Mac</span>, and I love crafting digital creations. My fascination with web development began in 2021 when I experimented with designing a landing page for my family's business. Since then, I've decided to follow my passion for creating original and inventive web solutions.
           I am committed to continuous learning and self-improvement in order to become a game-changer in the industry.
           </p>
         </motion.div>
@@ -103,7 +102,7 @@ const About = ({ setSelectedPage }: Props) => {
          visible: {opacity: 1, y: 0}
        }}
         >
-      <p className="font-normal ">currently working on both</p>
+      <p className="font-normal ">Actively pursuing both</p>
       
       <HText>
       <p className=" text-xl md:text-3xl ">FRONT-END and BACK-END development.</p>
