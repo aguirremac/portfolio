@@ -91,19 +91,19 @@ const Home = ({ setSelectedPage }: Props) => {
             </p>
         </motion.div>
         <HText>
-        <motion.div className="mt-10 flex gap-2  text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold"
+        <motion.div className="mt-10 flex gap-2  text-xl md:text-2xl lg:text-xl xl:text-4xl font-bold"
         initial = 'hidden'
         whileInView='visible'
-        viewport={{once: true, amount: 0.5}}  //once lang lalabas, 50% ng div lumabas na 
-        transition={{ duration: 1}}
+        viewport={{once: true, amount: 1}}  //once lang lalabas, 50% ng div lumabas na 
+        transition={{duration: 1}}
         variants={{
-         hidden: {opacity: 0, x: 50},
-         visible: {opacity: 1, x: 0}
+         hidden: {opacity: 0, y: 50},
+         visible: {opacity: 1, y: 0}
         }}>
-          I&nbsp; 
+          I create with 
           <TypewriterComponent
             options={{
-              strings: ["create.", "innovate.", "accomplish."],
+              strings: ["TypeScript.", "ReactJS.", "TailwindCSS.", "better UI/UX in mind."],
               autoStart: true,
               loop: true,
             }}

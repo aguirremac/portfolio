@@ -33,13 +33,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
       <div className={`${style.flexBetween} mx-auto w-11/12 md:w-9/12`}>
         <div>
           {isTopOfPage ? (
-            <div className="flex gap-4 md:gap-5 items-center">
+            <div className="flex gap-4 md:gap-5 lg:gap-1 xl:gap-5 items-center">
             <AnchorLink 
             onClick={()=>setSelectedPage(NavOptions.Home)}
             href={`#${NavOptions.Home}`}>
               <img 
               src="\assets\mac-agr-icon-slate.png"
-              className="h-[60px] md:h-[100px] cursor-pointer duration-300 ease-in-out active:scale-110 pr-5 md:pr-10"
+              className="h-[60px] md:h-[100px] cursor-pointer duration-300 ease-in-out active:scale-110 pr-5 md:pr-10 lg:pr-2 xl:pr-10"
               alt="logo"
             ></img> 
             </AnchorLink>
@@ -47,10 +47,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             <a href="https://github.com/aguirremac"><img className="h-[25px] md:h-[35px] cursor-pointer" src="\assets\github-slate.png"></img></a>
             </div>
           ) : (
-            <div className="flex gap-4 md:gap-5 items-center">
+            <div className="flex gap-4 md:gap-5 lg:gap-1 xl:gap-5 items-center">
             <img
               src="\assets\mac-agr-icon.png"
-              className="h-[60px] md:h-[100px] cursor-pointer duration-300 ease-in-out active:scale-110 pr-5 md:pr-10"
+              className="h-[60px] md:h-[100px] cursor-pointer duration-300 ease-in-out active:scale-110 pr-5 md:pr-10 lg:pr-2 xl:pr-10"
               alt="logo"
             ></img>
             <a href="https://www.linkedin.com/in/mark-john-aguirre-66464a136/"><img className="h-[20px] md:h-[30px] cursor-pointer" src="\assets\linkedin-green.png"></img></a>
@@ -60,7 +60,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
         </div>
 
         {isAboveMediumScreen ? (
-          <div className={`${style.flexBetween} gap-5 ${isTopOfPage ? "text-[#C9C0A5]" : "text-[#416A59]"}`}>
+          <div className={`${style.flexBetween} gap-5 lg:gap-3 xl:gap-5 ${isTopOfPage ? "text-[#C9C0A5]" : "text-[#416A59]"}`}>
             <Link
               page="HOME"
               selectedPage={selectedPage}
@@ -125,7 +125,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             <XMarkIcon />
           </div>
 
-          <div className=" flex flex-col items-center justify-center gap-10 pt-20 text-[#416A59]">
+          <div className=" flex flex-col items-center justify-center gap-10  pt-20 text-[#416A59]">
             <Link
               page="HOME"
               selectedPage={selectedPage}

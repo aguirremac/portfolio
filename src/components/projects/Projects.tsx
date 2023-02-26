@@ -9,11 +9,10 @@ type Props = {
 };
 
 const Projects = ({ setSelectedPage }: Props) => {
-    const [hoveredProjectIndex, setHoveredProjectIndex] = useState<number | null>(null)
-    const [clickedIndex, setClickedIndex] = useState<number | null>(null)
+    const [hoveredProjIndex, setHoveredProjIndex] = useState<number | null>(null)
     
   return (
-    <section id="projects" onClick={(e)=> setClickedIndex(null)} >
+    <section id="projects" >
       <motion.div
         className="relative mx-auto flex h-fit w-11/12 md:w-9/12 flex-col  py-32 font-mont"
         onViewportEnter={() => setSelectedPage(NavOptions.Projects)}
@@ -30,9 +29,9 @@ const Projects = ({ setSelectedPage }: Props) => {
           </HText> 
           {/* LISTA PROJECT */}
           {projectData.map((project: ProjectsType, index: number) => (
-            <motion.div onClick={(e)=> {
-                e.stopPropagation();  //to excempt the div to the onClick event on the parent div
-                setClickedIndex(index) }} 
+            <motion.div
+                 onMouseEnter={(e)=> setHoveredProjIndex(index) }
+                 onMouseLeave={(e)=> setHoveredProjIndex(null) }  
                 key={index} className="flex w-[80%] flex-col  md:flex-row items-center justify-between md:justify-center  bg-gradient-to-r from-[#C9C0A5] to-[#2877b5] drop-shadow-xl  rounded-md cursor-pointer"
                 initial="hidden"
                 whileInView="visible"
@@ -47,17 +46,17 @@ const Projects = ({ setSelectedPage }: Props) => {
               {/* project image */}
               <div className="flex w-full md:basis-1/2 justify-center border-b-2 md:border-b-0 md:border-r-2  border-[#2877b5]  md:border-[#2877b5]/50 ">
                 
-                {/* nested demo/code */}
-                {clickedIndex === index && 
-                <div className="flex gap-5 justify-center items-center w-full absolute top-0 right-0 bg-black/90 h-full z-30 font-semibold">
+                {/* backdrop demo/code */}
+                {hoveredProjIndex === index && 
+                <div className="flex gap-5 justify-center items-center w-full absolute top-0 right-0 bg-black/90 h-full z-30 font-semibold ">
                     <a href={project.liveURL}><p className=" rounded-md px-2 py-1 cursor-pointer btn-grad-light ">DEMO</p> </a>
                     <a href={project.githubLink}><p className=" rounded-md px-2 py-1 cursor-pointer btn-grad-light ">CODE</p></a>
                 </div>}
 
                 
-                <img  onMouseEnter={()=>setHoveredProjectIndex(index)} onMouseLeave={()=>setHoveredProjectIndex(null)}
+                <img  
                   className=" h-[200px] md:h-[250px] lg:h-[300px] cursor-pointer hover:scale-105   duration-300"
-                  src={hoveredProjectIndex === index ? project.imgHovered : project.img}
+                  src={project.imgHovered}
                   alt={project.title}
                 />
               </div>
@@ -70,7 +69,7 @@ const Projects = ({ setSelectedPage }: Props) => {
                         <p key={stackIndex} className="bg-red-500/70 hover:bg-red-500 hover:text-white cursor-pointer text-[#A3BCB6] rounded-lg text-[8px] lg:text-[10px] px-2 py-1">{stack}</p>   
                 ))}
                     </div>
-                <p className="w-[90%] text-[10px] lg:text-[15px]  font-light md:font-normal">
+                <p className="w-[90%] text-[13px] lg:text-[15px]  font-normal md:font-normal">
                   {project.description}
                 </p>
               </div>
