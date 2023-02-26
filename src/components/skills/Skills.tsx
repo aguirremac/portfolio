@@ -64,7 +64,7 @@ const Skills = ({ setSelectedPage }: Props) => {
             return (
               <motion.div
                 key={index}
-                className="item-center mt-10 flex h-[160px] w-[130px] cursor-pointer flex-col justify-items-center rounded-lg bg-[#C9C0A5] "
+                className="item-center mt-10 flex h-[160px] w-[130px]  flex-col justify-items-center rounded-lg bg-[#C9C0A5] "
                 variants={childVariant}
               >
                 <div>
@@ -123,7 +123,7 @@ const Skills = ({ setSelectedPage }: Props) => {
             return (
               <motion.div
                 key={qindex}
-                className="item-center mt-10 flex h-[160px] w-[130px] cursor-pointer flex-col justify-items-center rounded-lg bg-[#C9C0A5] "
+                className="item-center mt-10 flex h-[160px] w-[130px]  flex-col justify-items-center rounded-lg bg-[#C9C0A5] "
                 variants={childVariant}
               >
                 <div>
