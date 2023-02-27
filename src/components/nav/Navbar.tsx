@@ -23,7 +23,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const NavbarBG = `${isTopOfPage ? "" : "bg-[#C9C0A5]/90 duration-500  "}`;
   
   
-  const resumeLink = "https://drive.google.com/file/d/1wJq9-VfLlhuo4lhVgWTOv6GEIBEwXDWN/view?usp=share_link"
+  const resumeLink = "https://drive.google.com/file/d/1iXFunTG6ianPfDVDajNHwUzJIJbXG577/view?usp=sharing"
 
 
   return (
