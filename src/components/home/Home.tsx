@@ -47,7 +47,7 @@ const Home = ({ setSelectedPage }: Props) => {
           <CheckCircleIcon className="h-[20px] text-[#39709B] md:h-[30px]" />
         </p>
         <p className="text-xs font-light md:text-lg ">
-          FRONT-END DEVELOPER • VIDEO EDITOR
+          JUNIOR FULL STACK DEVELOPER
         </p>
       </motion.div>
 
