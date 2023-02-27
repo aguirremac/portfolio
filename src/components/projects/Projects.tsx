@@ -70,8 +70,8 @@ const handleHoverIn = (index:number) => {
                 {/* backdrop demo/code */}
                 {hoveredProjIndex === index && 
                 <div className="flex gap-5 justify-center items-center absolute top-0 right-0 left-0 bottom-0 bg-black/60   z-30 font-semibold rounded-md  ">
-                    <a href={project.liveURL}><p className=" rounded-md px-2 py-1 cursor-pointer btn-grad-light ">DEMO</p> </a>
-                    <a href={project.githubLink}><p className=" rounded-md px-2 py-1 cursor-pointer btn-grad-light ">CODE</p></a>
+                    <a target="_blank" href={project.liveURL}><p className=" rounded-md px-2 py-1 cursor-pointer btn-grad-light ">DEMO</p> </a>
+                    <a target="_blank" href={project.githubLink}><p className=" rounded-md px-2 py-1 cursor-pointer btn-grad-light ">CODE</p></a>
                 </div>}
 
                 
