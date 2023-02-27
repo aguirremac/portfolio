@@ -7,7 +7,7 @@ export const projectData: Array<ProjectsType> = [
     imgHovered: "/assets/lista-2.png",
     stacks: ["ReactJS", "Firebase", "TailwindCSS"],
     githubLink: "https://github.com/aguirremac/lista",
-    liveURL: "https://lista-macagr17.vercel.app/",
+    liveURL: "https://lista-note-keeper.vercel.app/",
     description:
       "A personal notes management web application that was built using ReactJS, TailwindCSS, React Router, and leverages functional components and hooks, as well as Firebase authentication and database integration for secure note-taking.",
   },
