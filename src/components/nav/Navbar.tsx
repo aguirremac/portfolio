@@ -109,7 +109,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
         {/* backdrop */}
         {showSidebar && (
-          <div className="fixed top-0 left-0 h-screen w-full bg-black/80"></div>
+          <div className="fixed top-0 left-0 h-screen w-full bg-black/80" onClick={()=>setShowSidebar(false)}></div>
         )}
         <div
           className={
