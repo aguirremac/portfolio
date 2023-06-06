@@ -23,7 +23,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const NavbarBG = `${isTopOfPage ? "" : "bg-[#C9C0A5]/90 duration-500  "}`;
   
   
-  const resumeLink = "https://drive.google.com/file/d/1iXFunTG6ianPfDVDajNHwUzJIJbXG577/view?usp=sharing"
+  const resumeLink = "/assets/Mark-John-Aguirre-CV.pdf"
 
 
   return (
@@ -90,7 +90,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             <button
               className={` rounded-xl border-2 ${isTopOfPage ? "border-[#C9C0A5]/60 text-[#C9C0A5]" : "border-[#416A59] text-[#416A59]"} py-2 px-3 text-sm  ${style.hoverBlue}`}
             >
-              <a target="_blank" className="flex gap-2" href={resumeLink}>
+              <a target="_blank" className="flex gap-2" href={resumeLink} download>
               <ArrowDownTrayIcon className="h-[20px]" />Résumé</a>
             </button>
           </div>
@@ -154,7 +154,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
           <button
               className={`  rounded-xl border-2 border-[#416A59] text-[#416A59] py-2 px-3 text-sm  ${style.hoverBlue}`}
-            ><a target="_blank" className="flex gap-2" href={resumeLink}>
+            ><a target="_blank" className="flex gap-2" href={resumeLink} download>
               <ArrowDownTrayIcon className="h-[20px]" />Résumé</a>
             </button>
           </div>
