@@ -42,9 +42,9 @@ const Home = ({ setSelectedPage }: Props) => {
           src="\assets\profile.png"
           alt="profile-photo"
         />
-        <p className="flex items-center justify-center gap-2 text-2xl font-bold md:text-2xl lg:4xl">
+        <p className="flex items-center justify-center  gap-2 text-2xl font-bold md:text-2xl  relative">
           Mark John Aguirre{" "}
-          <CheckCircleIcon className="h-[20px] text-[#39709B] md:h-[30px]" />
+          <CheckCircleIcon className="absolute -right-6 md:-right-8 h-[20px] text-[#39709B] md:h-[25px]" />
         </p>
         <p className="text-xs font-light md:text-lg ">
           FRONTEND DEVELOPER
