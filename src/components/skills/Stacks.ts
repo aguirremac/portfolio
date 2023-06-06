@@ -23,6 +23,16 @@ export const stacks: Array<StacksType> = [
         imgOrig: "/assets/ts.png",
     },
     {   
+        title: "Vuejs",
+        imgGreen: "/assets/vue-green.png",
+        imgOrig: "/assets/vue.png",
+    },
+    {   
+        title: "Nuxt3",
+        imgGreen: "/assets/nuxt-green.png",
+        imgOrig: "/assets/nuxt.png",
+    },
+    {   
         title: "React",
         imgGreen: "/assets/react-green.png",
         imgOrig: "/assets/react.png",
@@ -31,6 +41,11 @@ export const stacks: Array<StacksType> = [
         title: "Tailwind",
         imgGreen: "/assets/tailwind-green.png",
         imgOrig: "/assets/tailwind.png",
+    },
+    {   
+        title: "UnoCSS",
+        imgGreen: "/assets/uno-green.png",
+        imgOrig: "/assets/uno.png",
     },
     {   
         title: "Firebase",
@@ -49,20 +64,11 @@ export const stacks: Array<StacksType> = [
 export const learningStacks: Array<StacksType> = [
 
     {  
-        title: "NodeJS",
-        imgGreen: "/assets/nodejs-green.png",
-        imgOrig: "/assets/nodejs.png",
+        title: "PHP",
+        imgGreen: "/assets/php-green.png",
+        imgOrig: "/assets/php.png",
     },
-    {  
-        title: "Express",
-        imgGreen: "/assets/express-green.png",
-        imgOrig: "/assets/express.png",
-    },
-    {  
-        title: "MongoDB",
-        imgGreen: "/assets/mongodb-green.png",
-        imgOrig: "/assets/mongodb.png",
-    },
+    
 
 
 ]

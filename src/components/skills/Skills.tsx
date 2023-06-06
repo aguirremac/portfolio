@@ -113,7 +113,7 @@ const Skills = ({ setSelectedPage }: Props) => {
 
         {/* mapped learning stacks */}
         <motion.div
-          className=" mx-auto flex h-auto w-9/12 flex-wrap content-center items-center justify-between gap-5 rounded-3xl md:justify-center  md:gap-10"
+          className=" mx-auto flex h-auto w-9/12 flex-wrap  items-center justify-center gap-5 rounded-3xl md:justify-center  md:gap-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}

@@ -47,7 +47,7 @@ const Home = ({ setSelectedPage }: Props) => {
           <CheckCircleIcon className="h-[20px] text-[#39709B] md:h-[30px]" />
         </p>
         <p className="text-xs font-light md:text-lg ">
-          JUNIOR FULL STACK DEVELOPER
+          FRONTEND DEVELOPER
         </p>
       </motion.div>
 
@@ -103,7 +103,7 @@ const Home = ({ setSelectedPage }: Props) => {
           I create with 
           <TypewriterComponent
             options={{
-              strings: ["TypeScript.", "ReactJS.", "TailwindCSS.", "better UI/UX in mind."],
+              strings: ["TypeScript.", "Vue/NuxtJS.", "ReactJS.", "TailwindCSS.", "better UI/UX in mind."],
               autoStart: true,
               loop: true,
             }}

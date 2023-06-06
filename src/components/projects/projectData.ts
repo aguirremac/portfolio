@@ -2,6 +2,16 @@ import { ProjectsType } from "../../shared/types";
 
 export const projectData: Array<ProjectsType> = [
   {
+    title: "Rimera PH",
+    img: "/assets/rimera-1.png",
+    imgHovered: "/assets/rimera-2.png",
+    stacks: ["VueJS", "NuxtJS", "Vuetify3", "UnoCSS"],
+    githubLink: "",
+    liveURL: "https://rimera-ph.vercel.app/",
+    description:
+      "The site features a clean and minimalist design, allowing the showcased projects to take center stage. With a focus on user experience, the SPA feature ensures seamless navigation and accessibility for visitors.",
+  },
+  {
     title: "Lista - Note Keeper",
     img: "/assets/lista-1.png",
     imgHovered: "/assets/lista-2.png",
@@ -21,12 +31,12 @@ export const projectData: Array<ProjectsType> = [
     description: "This modern portfolio showcases my work as a web developer, built with Framer Motion and TypeScript. I designed the portfolio with a modern and visually appealing aesthetic, using dynamic animations and transitions to create an engaging user experience.",
   },
   {
-    title: "Book Finder App",
-    img: "/assets/libro-1.png",
-    imgHovered: "/assets/libro-2.png",
-    stacks: ["JavaScript", "CSS", "HTML", "API"],
-    githubLink: "https://github.com/aguirremac/Book-Project",
-    liveURL: "#",
-    description: "Built with JavaScript, CSS, and HTML. The app leverages the power of the Google Books API, connecting seamlessly through Axios and JSON, to bring you the latest and greatest in book discovery. With its user-friendly interface and intuitive navigation, our book finder app is the perfect solution for all your reading needs.",
+    title: "Optimum Solutions PH",
+    img: "/assets/optimum-1.png",
+    imgHovered: "/assets/optimum-2.png",
+    stacks: ["VueJS", "Nuxt3", "Vuetify", "TailwindCSS"],
+    githubLink: "",
+    liveURL: "https://optimumsolutions.com.ph/",
+    description: "Migrated to Nuxt3 a product website to designed to seamlessly showcase their offerings through a responsive and dynamic user experience.",
   },
 ];
